@@ -24,7 +24,7 @@ function makeRect(center, red, green, blue) {
 	var rectangle = two.makeRectangle(213, 20, 100, 100);
 
 	rectangle.fill = 'rgb(' + red.toString() + ',' + green.toString() + ',' + blue.toString() +')';
-	rectangle.stroke = '#1C75BC';
+	rectangle.stroke = 'rgb(' + green.toString() + ',' + red.toString() + ',' + blue.toString() +')';
 	rectangle.center(center, 0);
 	rectangle.translation.set(two.width / 2, two.height /2);
 	rectangle.rotation = Math.PI / 10;
@@ -42,33 +42,33 @@ two.bind('update', function(frameCount) {
 			if (blue > 254) {
 				blue = 0;
 			} else {
-				blue += 10;
+				blue += 20;
 			}
 
 			if (red > 254) {
 				red = 0;
 			} else {
-				red += 10;
+				red += 17;
 			}
 
 			if (green > 254) {
 				green = 0;
 			} else {
-				green += 10;
+				green += 5;
 			}
 			value.scale = 0.5;
 			value.rotation = 2;
 			center += 0.4;
 		}
 		var t = (value.scale) * 1.0001 / 20;
-		value.scale += t / 50;
-		value.rotation += t * .011 * Math.PI;
+		value.scale += t / 30;
+		value.rotation += t * .1 * Math.PI;
 	});
 }).play();
 window.setInterval(function() {
-	if (rectangles.length > 30) {
+	if (rectangles.length > 50) {
 		$("path").first().remove();
 		rectangles.shift();
 	}
-	makeRect(center, red, green, blue, windowWidth, windowHeight)}, 1000);
+	makeRect(center, red, green, blue, windowWidth, windowHeight)}, 500);
 two.update();
