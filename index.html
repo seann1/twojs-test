@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Sean's Checklist</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<style>
+		body {
+				color: #333;
+				background-color: #eee;
+				font-family: Helvetica, 'Century Gothic', Arial, sans;
+				font-size: 14px;
+				line-height: 26px;
+				padding: 15px 0px 15px 0px;
+			}
+
+			fieldset {
+				background-color: #FFFFFF;
+				border: medium none;
+				box-shadow: 0 0 6px #C8C2C2;
+				margin: 0 auto 25px; auto;
+				max-width: 700px;
+				padding: 15px 50px;
+			}
+			
+			h1 {
+				background-color: #eee;
+				font-size: 3em;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			fieldset h1 {
+				background-color: #fff;
+				font-size: 2em;
+				font-weight: bold;
+				text-align: left;
+			}
+
+			hr {
+				border: 0;
+				height: 1px;
+				background: #eee;
+			}
+
+			.inline {
+				display: inline-block;
+			}
+
+			.item {
+				padding-left: 5px;
+			}
+
+			.block {
+				display: block;
+				margin: 10px 0px 10px 0px;
+			}
+
+			body {
+				overflow-x: hidden;
+			}
+
+			.square1 {
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+				height: 2px;
+				width: 2px;
+				background-color: #a6e54e;
+				opacity: 0.8;
+				filter: hue-rotate(0deg);
+				-webkit-filter: hue-rotate(0deg);
+			}
+
+			.square2 {
+				position: fixed;
+				right: 0px;
+				bottom: 0px;
+				height: 2px;
+				width: 2px;
+				background-color: #a6e54e;
+				opacity: 0.8;
+				filter: hue-rotate(0deg);
+				-webkit-filter: hue-rotate(0deg);
+			}
+		</style>
+	</head>
+	<body class="body">
+			<div class="row">
+				<div class="col-md-2 nopadding">
+				<div id="anim"></div>
+				</div>
+				<div class="col-md-8 nopadding">
+					<fieldset>
+						<h1>All Projects</h1>
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded1" name="check" />
+									<label for="rounded1"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Check spelling of content</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded19" name="check" />
+									<label for="rounded19"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Copy ticket number and use it in comments</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded24" name="check" />
+									<label for="rounded24"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Grep filegroup for "replace_with" and correct any that were not filled in.</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded2" name="check" />
+									<label for="rounded2"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Read all emails in ticket</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded3" name="check" />
+									<label for="rounded3"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Read all notes in ticket</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded4" name="check" />
+									<label for="rounded4"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Leave note in ticket with starting revision number</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded5" name="check" />
+									<label for="rounded5"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Check trunk-demo-live compare</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded6" name="check" />
+									<label for="rounded6"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Extra testing at the end of long tickets.</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded18" name="check" />
+									<label for="rounded18"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Void your transactions</p>
+							</div>
+						</div>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded20" name="check" />
+									<label for="rounded20"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Make sure punctuation is consistent (colons or no colons)</p>
+							</div>
+						</div>
+
+						<hr>
+
+						<h2>If sending to QA</h2>
+
+						<div class="block">
+							<div class="inline">
+								<div class="roundedOne">
+									<input type="checkbox" value="None" id="rounded17" name="check" />
+									<label for="rounded17"></label>
+								</div>
+							</div>
+							<div class="inline">
+								<p class="item">Add a note to QA that you finished this checklist.</p>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+			<fieldset>
+
+				<h1>New Looks</h1>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded7" name="check" />
+							<label for="rounded7"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Pay more attention to preserving content layout details.</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded8" name="check" />
+							<label for="rounded8"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Remove requiredness and add dependency rules to required phone inputs.</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded9" name="check" />
+							<label for="rounded9"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Add "ufe-req" class to required inputs.</p>
+					</div>
+				</div>
+				
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded10" name="check" />
+							<label for="rounded10"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Do not change requiredness of fields after form has been jazzmined</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded11" name="check" />
+							<label for="rounded11"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Make sure all content is inside of fieldsets</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded12" name="check" />
+							<label for="rounded12"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Check all links, make sure they are not broken</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded13" name="check" />
+							<label for="rounded13"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Check spelling</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded14" name="check" />
+							<label for="rounded14"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Don't be hackin'</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded15" name="check" />
+							<label for="rounded15"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Check that adaptive display is behaving the way you want it to</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded16" name="check" />
+							<label for="rounded16"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Check var compare and make sure your counters are working properly</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded25" name="check" />
+							<label for="rounded25"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Style un-editable fields differently than editable ones in all browsers</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded22" name="check" />
+							<label for="rounded22"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">Add index.html and index.ftl to htdocs folder</p>
+					</div>
+				</div>
+
+				<div class="block">
+					<div class="inline">
+						<div class="roundedOne">
+							<input type="checkbox" value="None" id="rounded23" name="check" />
+							<label for="rounded23"></label>
+						</div>
+					</div>
+					<div class="inline">
+						<p class="item">If there is a .tmpl file, edit it instead of the index.ftl.html file</p>
+					</div>
+				</div>
+				
+			</fieldset>
+		
+		
+			<fieldset>
+				<h1>Removed</h1>
+
+			</fieldset>
+
+		<script type="text/javascript" src="js/two.min.js"></script>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="js/twoScript.js"></script>
+	</body>
+</html>
